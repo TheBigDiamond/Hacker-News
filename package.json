@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "set NODE_ENV=production && webpack --mode production",
+    "build": "set NODE_ENV=production & webpack --mode production",
     "dev": "webpack serve --mode development --open",
     "analyze": "webpack --mode production --profile --json > stats.json && webpack-bundle-analyzer stats.json"
   },
@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "Hacker News Clone",
   "devDependencies": {
+    "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "html-webpack-plugin": "^5.6.3",
