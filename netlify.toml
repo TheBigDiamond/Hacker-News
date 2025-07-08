@@ -11,6 +11,8 @@
   command = "npm run dev"
   publish = "dist"
   port = 9002
+  targetPort = 9002
+  framework = "#custom"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -19,6 +21,11 @@
 [functions]
   node_bundler = "esbuild"
 
-[dev]
-  framework = "#custom"
-  targetPort = 9002
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
