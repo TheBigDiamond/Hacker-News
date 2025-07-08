@@ -56,7 +56,11 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: 'public', to: '' },
+        { 
+          from: 'public/_redirects', 
+          to: './_redirects',
+          toType: 'file'
+        },
       ],
     }),
     new HtmlWebpackPlugin({
