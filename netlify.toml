@@ -1,23 +1,12 @@
 [build]
   command = "npm install && npm run build"
   publish = "dist"
-  fail = "false"  # Don't fail build if there are warnings
 
 # Handle client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Development settings
-[dev]
-  command = "npm run dev"
-  publish = "dist"
-  port = 9002
-  targetPort = 9002
-  framework = "#custom"
-
-# Build environment
 [build.environment]
   NODE_VERSION = "18"
   NPM_FLAGS = "--omit=dev"
