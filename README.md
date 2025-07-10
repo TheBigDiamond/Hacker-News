@@ -39,6 +39,8 @@
 
 This application is designed as a newsletter, with an updating list of the newest news published on the Hacker News website, all upon refresh, plus the option to load more news.
 
+You can find the website at [this link](https://hacker-news-s2i.netlify.app/)
+
 ### Built With
 
 * ![Javascript][javascript-shield]
