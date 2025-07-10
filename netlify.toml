@@ -2,42 +2,35 @@
   command = "npm install && npm run build"
   publish = "dist"
 
-# Handle client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
 [build.environment]
   NODE_VERSION = "18"
   NPM_FLAGS = "--omit=dev"
-  CI = "false"  # Prevent CI-specific optimizations
+  CI = "false"
 
-# Functions configuration
 [functions]
   node_bundler = "esbuild"
   external_node_modules = []
 
-# Environment variables for different contexts
 [context.production]
   command = "npm install --production && npm run build"
-
-[context.production.environment]
-  NODE_ENV = "production"
+  [context.production.environment]
+    NODE_ENV = "production"
 
 [context.deploy-preview]
   command = "npm install && npm run build"
-
-[context.deploy-preview.environment]
-  NODE_ENV = "development"
+  [context.deploy-preview.environment]
+    NODE_ENV = "development"
 
 [context.branch-deploy]
   command = "npm install && npm run build"
+  [context.branch-deploy.environment]
+    NODE_ENV = "development"
 
-[context.branch-deploy.environment]
-  NODE_ENV = "development"
-
-# Plugin settings
 [plugins]
   [plugins."@netlify/plugin-lighthouse"]
-    # Skip Lighthouse for now to speed up builds
     skip = true
