@@ -11,6 +11,7 @@
     Stay updated on the world of computer science and entrepreneurship with this newsletter-type application!
   </p>
 </div>
+<br />
 
 <!-- TABLE OF CONTENTS -->
 <details>
