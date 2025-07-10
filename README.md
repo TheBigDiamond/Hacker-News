@@ -3,8 +3,9 @@
 <div align="center">
   <a id="readme-top"></a>
   <img src="src/IMG/logo.png" alt="Logo" width="250" height="250">
-
-  <h3 align="center">Hacker News</h3>
+  
+  <br />
+  <br />
 
   <p align="center">
     Stay updated on the world of computer science and entrepreneurship with this newsletter-type application!
